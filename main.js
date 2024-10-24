@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from "../node_modules/three/build/three.module.js
 
 // Setup scene
 const scene = new THREE.Scene();
@@ -46,7 +46,6 @@ const createPlanet = () => {
   ring.rotation.x = Math.PI / 2;
   planet.add(ring);
 
-  // Add surface detail with displacement
   const displacementGeometry = new THREE.SphereGeometry(5.1, 64, 64);
   const displacementMaterial = new THREE.MeshPhongMaterial({
     color: 0x2a9d8f,
@@ -61,7 +60,7 @@ const createPlanet = () => {
 };
 
 const planet = createPlanet();
-planet.position.set(15, 0, -20); // Start position on the right
+planet.position.set(15, 0, -20); 
 scene.add(planet);
 
 // Create stars
